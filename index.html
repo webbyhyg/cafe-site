@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Breeze</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="top-section">
+    <div class="overlay">
+      <h1 class="catchphrase fade-up">ようこそ Cafe Breeze へ</h1>
+      <p class="fade-up">心地よい時間と香り高い一杯を。</p>
+    </div>
+  </header>
+
+  <section class="menu-section fade-up">
+    <h2>メニュー</h2>
+    <div class="tab-buttons">
+      <button class="tab-button active" data-category="all">すべて</button>
+      <button class="tab-button" data-category="food">フード</button>
+      <button class="tab-button" data-category="drink">ドリンク</button>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item" data-category="food">
+        <img src="images/pasta.jpg" alt="パスタ" />
+        <h3>トマトパスタ</h3>
+        <p>¥900</p>
+      </div>
+      <div class="menu-item" data-category="drink">
+        <img src="images/coffee.jpg" alt="コーヒー" />
+        <h3>ブレンドコーヒー</h3>
+        <p>¥500</p>
+      </div>
+      <div class="menu-item" data-category="food">
+        <img src="images/sandwich.jpg" alt="サンドイッチ" />
+        <h3>サンドイッチ</h3>
+        <p>¥750</p>
+      </div>
+      <div class="menu-item" data-category="drink">
+        <img src="images/latte.jpg" alt="カフェラテ" />
+        <h3>カフェラテ</h3>
+        <p>¥550</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservation-section fade-up">
+    <h2>ご予約</h2>
+    <form id="reserve-form">
+      <input type="text" name="name" placeholder="お名前" />
+      <input type="email" name="email" placeholder="メールアドレス" />
+      <input type="date" name="date" />
+      <input type="time" name="time" />
+      <input type="number" name="number" placeholder="人数" min="1" />
+      <button type="submit">予約する</button>
+    </form>
+  </section>
+
+  <footer class="fade-up">
+    <p>&copy; 2025 Cafe Breeze. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
