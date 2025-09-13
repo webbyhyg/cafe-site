@@ -1,4 +1,4 @@
-// DOM読み込み完了時の処理
+// DOM読み込み完了時の処理 test
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
 });
