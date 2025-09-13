@@ -5,62 +5,190 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cafe Breeze</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header class="top-section">
-    <div class="overlay">
-      <h1 class="catchphrase fade-up">ようこそ Cafe Breeze へ</h1>
-      <p class="fade-up">心地よい時間と香り高い一杯を。</p>
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Cafe Breeze</a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">ホーム</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#reservation">ご予約</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <section class="menu-section fade-up">
+  <!-- ヒーローセクション -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>ようこそ Cafe Breeze へ</h1>
+      <p>心地よい時間と香り高い一杯を、上質な空間でお楽しみください</p>
+      <a href="#menu" class="cta-button">メニューを見る</a>
+    </div>
+  </section>
+
+  <!-- メニューセクション -->
+  <section id="menu" class="menu-section section fade-up">
     <h2>メニュー</h2>
     <div class="tab-buttons">
       <button class="tab-button active" data-category="all">すべて</button>
       <button class="tab-button" data-category="food">フード</button>
       <button class="tab-button" data-category="drink">ドリンク</button>
+      <button class="tab-button" data-category="dessert">デザート</button>
     </div>
     <div class="menu-items">
       <div class="menu-item" data-category="food">
-        <img src="images/pasta.jpg" alt="パスタ" />
-        <h3>トマトパスタ</h3>
-        <p>¥900</p>
+        <img src="images/pasta.jpg" alt="トマトパスタ" class="menu-image">
+        <div class="menu-item-content">
+          <h3>トマトパスタ</h3>
+          <p class="description">新鮮なトマトとバジルの香り豊かなパスタです</p>
+          <p class="price">¥900</p>
+        </div>
       </div>
       <div class="menu-item" data-category="drink">
-        <img src="images/coffee.jpg" alt="コーヒー" />
-        <h3>ブレンドコーヒー</h3>
-        <p>¥500</p>
+        <img src="images/coffee.jpg" alt="ブレンドコーヒー" class="menu-image">
+        <div class="menu-item-content">
+          <h3>ブレンドコーヒー</h3>
+          <p class="description">当店自慢のオリジナルブレンド</p>
+          <p class="price">¥500</p>
+        </div>
       </div>
       <div class="menu-item" data-category="food">
-        <img src="images/sandwich.jpg" alt="サンドイッチ" />
-        <h3>サンドイッチ</h3>
-        <p>¥750</p>
+        <img src="images/sandwich.jpg" alt="クラブサンドイッチ" class="menu-image">
+        <div class="menu-item-content">
+          <h3>クラブサンドイッチ</h3>
+          <p class="description">ボリューム満点の三段重ねサンドイッチ</p>
+          <p class="price">¥750</p>
+        </div>
       </div>
       <div class="menu-item" data-category="drink">
-        <img src="images/latte.jpg" alt="カフェラテ" />
-        <h3>カフェラテ</h3>
-        <p>¥550</p>
+        <img src="images/latte.jpg" alt="カフェラテ" class="menu-image">
+        <div class="menu-item-content">
+          <h3>カフェラテ</h3>
+          <p class="description">なめらかなミルクとエスプレッソの絶妙なハーモニー</p>
+          <p class="price">¥550</p>
+        </div>
+      </div>
+      <div class="menu-item" data-category="dessert">
+        <img src="images/cheesecake.jpg" alt="ニューヨークチーズケーキ" class="menu-image">
+        <div class="menu-item-content">
+          <h3>ニューヨークチーズケーキ</h3>
+          <p class="description">濃厚でクリーミーな本格チーズケーキ</p>
+          <p class="price">¥650</p>
+        </div>
+      </div>
+      <div class="menu-item" data-category="drink">
+        <img src="images/tea.jpg" alt="アールグレイ" class="menu-image">
+        <div class="menu-item-content">
+          <h3>アールグレイ</h3>
+          <p class="description">ベルガモットの上品な香りの紅茶</p>
+          <p class="price">¥450</p>
+        </div>
+      </div>
+      <div class="menu-item" data-category="dessert">
+        <img src="images/tiramisu.jpg" alt="ティラミス" class="menu-image">
+        <div class="menu-item-content">
+          <h3>ティラミス</h3>
+          <p class="description">マスカルポーネとコーヒーの大人の味わい</p>
+          <p class="price">¥580</p>
+        </div>
+      </div>
+      <div class="menu-item" data-category="food">
+        <img src="images/omelet.jpg" alt="デミグラスオムライス" class="menu-image">
+        <div class="menu-item-content">
+          <h3>デミグラスオムライス</h3>
+          <p class="description">ふわとろ卵とコクのあるデミグラスソース</p>
+          <p class="price">¥850</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="reservation-section fade-up">
+  <!-- 予約セクション -->
+  <section id="reservation" class="reservation-section section fade-up">
     <h2>ご予約</h2>
-    <form id="reserve-form">
-      <input type="text" name="name" placeholder="お名前" />
-      <input type="email" name="email" placeholder="メールアドレス" />
-      <input type="date" name="date" />
-      <input type="time" name="time" />
-      <input type="number" name="number" placeholder="人数" min="1" />
-      <button type="submit">予約する</button>
-    </form>
+    <div class="form-container">
+      <form id="reserve-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号</label>
+            <input type="tel" id="phone" name="phone" placeholder="080-1234-5678">
+          </div>
+          <div class="form-group">
+            <label for="date">来店日 <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">来店時間 <span class="required">*</span></label>
+            <input type="time" id="time" name="time" required>
+          </div>
+          <div class="form-group">
+            <label for="number">人数 <span class="required">*</span></label>
+            <select id="number" name="number" required>
+              <option value="">人数を選択してください</option>
+              <option value="1">1名</option>
+              <option value="2">2名</option>
+              <option value="3">3名</option>
+              <option value="4">4名</option>
+              <option value="5">5名</option>
+              <option value="6">6名以上</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="message">ご要望・備考</label>
+          <textarea id="message" name="message" rows="4" placeholder="アレルギーやご要望がございましたらお書きください"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">予約する</button>
+      </form>
+    </div>
   </section>
 
-  <footer class="fade-up">
-    <p>&copy; 2025 Cafe Breeze. All Rights Reserved.</p>
+  <!-- フッター -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="footer-section">
+          <h3>店舗情報</h3>
+          <p>〒100-0001<br>
+          東京都千代田区千代田1-1<br>
+          TEL: <a href="tel:03-1234-5678">03-1234-5678</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>営業時間</h3>
+          <p>平日: 8:00 - 22:00<br>
+          土日祝: 9:00 - 23:00<br>
+          定休日: 年中無休</p>
+        </div>
+        <div class="footer-section">
+          <h3>フォローしてください</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cafe Breeze. All Rights Reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
